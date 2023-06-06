@@ -1,0 +1,88 @@
+.buttons-list
+  position relative
+  padding-top 60px
+  padding-bottom 80px
+
+  &__item
+    margin-bottom 60px
+
+    &:last-child
+      margin-bottom 0
+
+    &-body
+      line-height 1
+      font-size 0
+      @media (max-width: $tablet - 1)
+        .site-btn
+          font-size 8px
+          min-width 0
+          width 100%
+          padding 10px 10px
+          border-width 2px
+
+    &-name
+      margin-bottom 10px
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      color: #FFFFFF;
+
+  @media (min-width: $mobile)
+    &__item
+      display flex
+      align-items center
+
+      &-body
+        flex 0 0 170px
+
+        @media (max-width: $desc - 1)
+          .site-btn
+            font-size 8px
+            min-width 0
+            width 100%
+            padding 10px 10px
+            border-width 2px
+
+      &-name
+        flex 1 1 0
+        margin-right 10px
+        margin-bottom 0
+
+  @media (min-width: $tablet)
+    &__list
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+
+    &__item
+      margin-bottom 0
+      flex 0 0 auto
+      display block
+
+      &:nth-child(1n +3)
+        margin-top 60px
+
+      &-name
+        display inline-block
+        vertical-align middle
+
+      &-body
+        display inline-block
+        vertical-align middle
+        width 160px
+
+  @media (min-width: $desc)
+    padding-top 140px
+    padding-bottom 140px
+    &__item
+
+      &-name
+        font-size 28px
+
+      &-body
+        min-width 260px
+
+  @media (min-width: $full)
+    &__item
+      &-name
+        margin-right 50px

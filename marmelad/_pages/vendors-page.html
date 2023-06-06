@@ -1,0 +1,21 @@
+= yaml =
+pageTitle: Vendors
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 3 %}
+	{% include 'hero-banner.html' %}
+	{% include 'brand-more-list.html' %}
+
+{% endblock %}

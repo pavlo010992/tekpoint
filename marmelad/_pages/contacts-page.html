@@ -1,0 +1,24 @@
+= yaml =
+pageTitle: Contact
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	<div class="site-title site-width wow fadeInUp" data-wow-delay="100ms">
+		<h1 data-letter="G">Get in touch with the right contact <span></span></h1>
+	</div>
+	{% include 'adresses-block.html' %}
+	{% include 'faq-block.html' %}
+	{% include 'buttons-list.html' %}
+
+{% endblock %}

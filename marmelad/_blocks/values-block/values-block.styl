@@ -1,0 +1,116 @@
+.values-block
+  position relative
+  padding-top 60px
+  padding-bottom 60px
+
+  &--mini
+    .site-row
+      text-align center
+      font-size 24px
+      font-weight 500
+      margin-bottom 0
+
+      @media (min-width: $tablet)
+        text-align left
+
+      a:not(.site-btn)
+        color #fff
+        text-decoration none
+
+        &:hover
+          color $orange
+    & ^[0]
+      &__inner
+        max-width 1080px
+
+
+  &__bg-fon
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+
+    &:before
+      content ""
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      right 0
+      background linear-gradient(0deg, rgba(16, 16, 16, 0.74), rgba(16, 16, 16, 0.74))
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+
+  &__inner
+    position relative
+    z-index 1
+
+  &__text
+    margin-bottom 50px
+
+  &__item
+    margin-bottom 40px
+    display flex
+    align-items center
+    justify-content center
+    background $orange
+    border-radius: 4px;
+    padding 15px 10px
+
+    &-name
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+    &-icon
+      flex 0 0 auto
+      height 50px
+      display flex
+      align-items center
+      justify-content center
+      margin-right 20px
+
+      img
+        max-width 50px
+        max-height 50px
+
+  @media (min-width: $tablet)
+    &__list
+      display flex
+      flex-wrap wrap
+      justify-content center
+      margin-right -20px
+
+    &__item
+      flex 0 0 33.333%
+      flex-basis calc(33.333% - 20px)
+      margin-right 20px
+      margin-bottom 20px
+
+  @media (min-width: $desc)
+    padding-top 100px
+    padding-bottom 120px
+
+    &--mini
+      padding-top 150px
+      padding-bottom 150px
+
+    &__text
+      margin-bottom 70px
+
+    &__item
+      flex-basis calc(20% - 20px)
+      padding 18px 10px
+      margin-bottom 0
+
+      &:nth-child(1n + 6)
+        margin-top 20px
+
+      &-name
+        font-size: 22px;

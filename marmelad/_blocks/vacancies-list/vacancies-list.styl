@@ -1,0 +1,67 @@
+.vacancies-list
+  position relative
+  padding-top 60px
+  padding-bottom 80px
+  &__item
+    margin-bottom 60px
+
+    &:last-child
+      margin-bottom 0
+
+  @media (min-width: $tablet)
+    &__list
+      display flex
+      flex-wrap wrap
+      margin-right -20px
+
+    &__item
+      margin-right 20px
+      flex 0 0 33.333%
+      flex-basis calc(33.333% - 20px)
+      margin-bottom 0
+
+      &:nth-child(1n + 4)
+        margin-top 60px
+
+  @media (min-width: $desc)
+    padding-top 80px
+    padding-bottom 140px
+
+.vacancies-thumbs
+  position relative
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  padding 20px 20px
+  min-height 130px
+  display flex
+  align-items center
+  justify-content center
+  text-decoration none
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition all 0.3s ease
+
+  &:hover
+    background #ffffff
+    color $orange
+    &:after
+      background $orange url("data:image/svg+xml,%3Csvg width='8' height='17' viewBox='0 0 8 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.9973 8.51333C7.99782 8.79656 7.90487 9.07104 7.73458 9.28912L2.02324 16.5621C1.82936 16.8096 1.55074 16.9653 1.2487 16.9949C0.946653 17.0244 0.645916 16.9254 0.412646 16.7197C0.179376 16.5139 0.0326817 16.2183 0.00483352 15.8977C-0.0230146 15.5772 0.0702645 15.2581 0.264151 15.0105L5.38151 8.51333L0.446915 2.01613C0.352031 1.89214 0.281175 1.74948 0.238417 1.59633C0.19566 1.44319 0.181846 1.28259 0.197768 1.12376C0.213691 0.964931 0.259035 0.811008 0.331196 0.670837C0.403358 0.530666 0.500913 0.407013 0.618254 0.30698C0.735704 0.195971 0.873491 0.111897 1.02298 0.0600243C1.17248 0.00815392 1.33045 -0.010397 1.48702 0.00553513C1.64358 0.0214672 1.79535 0.071537 1.93283 0.152611C2.07031 0.233683 2.19053 0.344013 2.28596 0.476686L7.80311 7.74967C7.94649 7.97402 8.01486 8.2429 7.9973 8.51333Z' fill='%23fff'/%3E%3C/svg%3E%0A") 50% 50% no-repeat
+
+  &:after
+    content ""
+    position absolute
+    bottom -20px
+    right 15px
+    width 40px
+    height 40px
+    background #fff url("data:image/svg+xml,%3Csvg width='8' height='17' viewBox='0 0 8 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.9973 8.51333C7.99782 8.79656 7.90487 9.07104 7.73458 9.28912L2.02324 16.5621C1.82936 16.8096 1.55074 16.9653 1.2487 16.9949C0.946653 17.0244 0.645916 16.9254 0.412646 16.7197C0.179376 16.5139 0.0326817 16.2183 0.00483352 15.8977C-0.0230146 15.5772 0.0702645 15.2581 0.264151 15.0105L5.38151 8.51333L0.446915 2.01613C0.352031 1.89214 0.281175 1.74948 0.238417 1.59633C0.19566 1.44319 0.181846 1.28259 0.197768 1.12376C0.213691 0.964931 0.259035 0.811008 0.331196 0.670837C0.403358 0.530666 0.500913 0.407013 0.618254 0.30698C0.735704 0.195971 0.873491 0.111897 1.02298 0.0600243C1.17248 0.00815392 1.33045 -0.010397 1.48702 0.00553513C1.64358 0.0214672 1.79535 0.071537 1.93283 0.152611C2.07031 0.233683 2.19053 0.344013 2.28596 0.476686L7.80311 7.74967C7.94649 7.97402 8.01486 8.2429 7.9973 8.51333Z' fill='%23EB680D'/%3E%3C/svg%3E%0A") 50% 50% no-repeat
+    border-radius 100%
+    transition all 0.3s ease
+
+  @media (min-width: $desc)
+    font-size 22px
+    min-height 180px

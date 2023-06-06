@@ -1,0 +1,24 @@
+= yaml =
+pageTitle: Partner Connectivity
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 5 %}
+	{% include 'hero-banner.html' %}
+	{% set blockWithListType = '3' %}
+	{% include 'block-with-list.html' %}
+
+	{% set loopIndexHide = 3 %}
+	{% include 'listes-block.html' %}
+{% endblock %}

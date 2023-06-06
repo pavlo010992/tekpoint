@@ -1,0 +1,15 @@
+<div block="team-box" class="wow fadeInUp" data-wow-delay="100ms">
+	<div elem="inner" class="site-width">
+		<div class="site-description">
+			Leading with a vision <span><span></span></span>
+		</div>
+		<p>Many years of experience paired with excellent expertise, a large network of contacts<br> and a hands-on mentality characterize the Tekpoint management board.</p>
+		<div elem="list">
+			{% for item in team %}
+			    <div elem="item">
+			    	{% include 'team-thumbs.html' %}
+			    </div>
+			{% endfor %}
+		</div>
+	</div>
+</div><!-- team-box -->

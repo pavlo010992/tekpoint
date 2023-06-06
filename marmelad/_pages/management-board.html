@@ -1,0 +1,21 @@
+= yaml =
+pageTitle: Management Board
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	<div class="site-title site-width wow fadeInUp" data-wow-delay="100ms">
+		<h1 data-letter="M">Management Board <span></span></h1>
+	</div>
+	{% include 'team-box.html' %}
+{% endblock %}

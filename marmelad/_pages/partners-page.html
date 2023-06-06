@@ -1,0 +1,22 @@
+= yaml =
+pageTitle: Partners
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 9 %}
+	{% set brandMoreType = '2' %}
+	{% include 'hero-banner.html' %}
+	{% include 'brand-more-list.html' %}
+
+{% endblock %}

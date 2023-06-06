@@ -1,0 +1,28 @@
+= yaml =
+pageTitle: Vacancies
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	<div class="site-title site-width wow fadeInUp" data-wow-delay="100ms">
+		<h1 data-letter="B">Buchhalter (m/w/d) <span></span></h1>
+	</div>
+	<div block="text-description" class="site-width wow fadeInUp" data-wow-delay="200ms">
+		Wir bei Tekpoint sind Experten für den Vertrieb von Telekommunikationsprodukten und Unterhaltungselektronik. Durch kundenorientiertes Service, innovative Vertriebswege und einem dynamischen Team konnten wir die Geschäftsbeziehungen zu unseren Kunden und Lieferantenkontinuierlich ausbauen. Zur Verstärkung unseres Accounting-Teams in Wien suchen wir aktuell eine(n) erfahrene(n)
+	</div><!-- text-description -->
+	{% set informationTextType = '2' %}
+	{% include 'information-text-block.html' %}
+	{% set valuesBlockType = '3' %}
+	{% include 'values-block.html' %}
+	{% include 'vacancies-list.html' %}
+{% endblock %}

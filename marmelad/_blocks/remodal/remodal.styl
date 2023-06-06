@@ -1,0 +1,208 @@
+html.remodal-is-locked
+  overflow: hidden
+  -ms-touch-action: none
+  touch-action: none
+
+
+.remodal,
+[data-remodal-id]
+  display: none
+
+/* Necessary styles of the overlay */
+.remodal-wrapper
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
+  display: none;
+  overflow: hidden;
+
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+
+
+.remodal-wrapper:after {
+  display: inline-block;
+
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  backface-visibility: hidden;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+  -webkit-animation-name: remodal-opening-keyframes;
+  animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+  -webkit-animation-name: remodal-closing-keyframes;
+  animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+.remodal
+  width 100%
+  position relative
+  outline none
+  transform translate3d(0, 0, 0)
+  text-align left
+  max-height 100%
+  display inline-flex
+  margin 0 auto
+  max-width 840px
+  padding 0 10px
+
+  .site-title
+    margin-bottom 10px
+    @media (min-width: $desc)
+      min-height 110px
+      h1,h2
+        padding-left 40px
+        &:before
+          font-size 140px
+
+
+  @media (min-width: $tablet)
+    padding 0 20px
+
+  &:before
+    content ""
+    position absolute
+    top 20px
+    bottom 20px
+    left 0
+    right 0
+    border-radius 4px
+    background $orange
+
+
+  &__container
+    position relative
+    max-height 100%
+    width 100%
+    text-align center
+
+  &__content
+    position relative
+    max-height 100%
+    overflow auto
+    padding 0
+    text-align left
+
+    > .site-form
+      background #101010
+      padding 40px 15px
+
+      @media (min-width: $tablet)
+        border-radius 4px
+        padding 35px 100px 80px
+
+  &__close
+    position: absolute
+    top: 7px
+    right: 7px
+    padding: 0
+    z-index 1
+    border: 0
+    width 40px
+    height 40px
+    cursor pointer
+    background url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 29L29 1M29 29L1 1' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 50% 50% no-repeat
+    background-size 12px auto
+
+    @media (min-width: $desc)
+      top 15px
+      right 15px
+
+  &-overlay
+    display: none
+    position: fixed
+    z-index: 100
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(#5F5F5F, 0.3)
+
+
+    &.remodal-is-opening,
+    &.remodal-is-closing
+      animation-duration: 0.3s
+      animation-fill-mode: forwards
+
+
+    &.remodal-is-opening,
+    &.is-multiple
+      animation-name: remodal-overlay-opening-keyframes
+
+    &.remodal-is-closing
+      animation-name: remodal-overlay-closing-keyframes
+
+/* Keyframes
+   ========================================================================== */
+@keyframes remodal-opening-keyframes {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

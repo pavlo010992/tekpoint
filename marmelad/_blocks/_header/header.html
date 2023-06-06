@@ -1,7 +1,46 @@
 <header block="header">
-    <div elem="content">
-        <h1>{{ app.package.name | capitalize}} v{{ app.package.version }}</h1>
-        <p>Bootstrap {{ app.settings.app.bts[app.settings.app.bts.use].code }}</p>
-        <hr>
-    </div>
+	<div elem="inner" class="site-width wow fadeIn" data-wow-delay="100ms">
+		<div elem="left">
+			<a elem="logo" href="/index.html">
+				<img src="img/logo.svg" alt="">
+			</a>
+		</div>
+		<div elem="middle">
+			<nav block="head-menu">
+				<ul>
+					{% for item in menu %}
+					    <li {% if item.level2 %}class="hasChild"{% endif %}>
+					    	<a href="{{item.link}}">{{item.name}}</a>
+					    	{% if item.level2 %}
+					    		<ul>
+					    			{% for i in item.level2 %}
+					    			    <li>
+					    			    	<a href="{{i.link}}">{{i.name}}</a>
+					    			    </li>
+					    			{% endfor %}
+					    		</ul>
+					    	{% endif %}
+					    </li>
+					{% endfor %}
+				</ul>
+			</nav><!-- block -->
+		</div>
+		<div elem="right">
+			<div elem="search">
+				<form action="#">
+					<input type="text">
+					<button></button>
+				</form>
+			</div>
+			<div elem="language">
+				<ul>
+					<li class="active"><a href="#">EN</a></li>
+					<li><a href="#">RU</a></li>
+				</ul>
+			</div>
+			<div elem="burger-btn">
+				<button></button>
+			</div>
+		</div>
+	</div>
 </header><!-- header -->

@@ -1,0 +1,86 @@
+.information-text-block
+  padding-top 80px
+  padding-bottom 80px
+
+  @media (max-width: $tablet - 1)
+    &--imageTop
+
+      & ^[0]
+        &__inner
+          display flex
+          flex-direction column
+
+        &__content
+          margin-bottom 0
+
+        &__image-box
+          margin-bottom 40px
+          order -1
+
+  &__more
+    text-align center
+
+  &__text
+    margin-bottom 40px
+    font-weight 300
+
+  &__content
+    margin-bottom 60px
+
+  &__image-box
+    text-align center
+  &__image
+    position relative
+    display inline-block
+
+    &:before
+      content ""
+      position absolute
+      left 50%
+      right -10px
+      top 20px
+      bottom 20px
+      border-radius: 4px;
+      background $orange
+
+    img
+      border-radius 4px
+      position relative
+
+  @media (min-width: $tablet)
+    &__inner
+      display flex
+
+    &__content
+      flex 1 1 0
+      display flex
+      align-items center
+      margin-right 30px
+      margin-bottom 0
+
+    &__image-box
+      text-align left
+      flex 0 0 300px
+
+    &__more
+      text-align left
+
+  @media (min-width: $desc)
+    padding-top 140px
+    padding-bottom 140px
+
+    &__text
+      margin-bottom 60px
+
+    &__content
+      margin-right 100px
+
+    &__image-box
+      flex 0 0 510px
+
+    &__image
+      position relative
+      display inline-block
+
+      &:before
+        right -20px

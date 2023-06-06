@@ -1,0 +1,90 @@
+{% if listesType == '2' %}
+	<div block="listes-block">
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="100ms" elem="title">
+				<h2 data-letter="C">Careers <span></span></h2>
+			</div>
+			<div block="site-row" class="wow fadeInUp" data-wow-delay="300ms">
+				<div elem="column-left">
+					<div class="site-description">
+						We are hiring!
+						<span>
+							<span></span>
+						</span>
+					</div>
+				</div>
+				<div elem="column-right">
+					<a href="/career-page.html" class="site-btn site-btn--1">view more jobs</a>
+				</div>
+			</div>
+			<div elem="list" class="wow fadeInUp" data-wow-delay="400ms">
+				{% for item in services2 %}
+				    <div elem="item">
+				    	<a href="/vacancies-page.html" block="services-thumbs">
+				    		<span elem="image">
+								<picture>
+									 <!-- <source type="image/webp" srcset="img/image.webp"> -->
+									 <source type="image/jpeg" srcset="{{item.image}}">
+									 <img src="{{item.image}}" loading="lazy" width="388px" height="268px" alt="">
+								</picture>
+				    		</span>
+				    		<span elem="content">
+				    			<span elem="name">{{item.name}}</span>
+				    			{% if item.desc %}
+					    			<span elem="desc">{{item.desc}}</span>
+				    			{% endif %}
+				    			<span elem="text">{{item.text}}</span>
+				    		</span>
+				    	</a><!-- services-thumbs -->
+				    </div>
+				{% endfor %}
+			</div>
+		</div>
+	</div><!-- listes-block -->
+{% else %}
+
+	<div block="listes-block">
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="100ms" elem="title">
+				<h2 data-letter="S">Services & Benefits <span></span></h2>
+			</div>
+			<div class="site-description wow fadeIn" data-wow-delay="200ms">
+				Strong vendors, strong relationships
+				<span>
+					<span></span>
+				</span>
+			</div>
+			<div block="site-row" class="wow fadeInUp" data-wow-delay="300ms">
+				<div elem="column-left">With our extensive service portfolio, we are reliably at your company's side. Experts from a wide variety of specialist areas, service providers and innovative technology solutions guarantee smooth processes as well as an individual handling and service package for each of our partners. Tekpoint's range of services covers the entire technological life cycle.</div>
+				<div elem="column-right">
+					<a href="/services-page.html" class="site-btn site-btn--1">learn more benefits</a>
+				</div>
+			</div>
+			<div elem="list" class="wow fadeInUp" data-wow-delay="400ms">
+				{% for item in services %}
+					{% if loop.index != loopIndexHide %}
+				    <div elem="item">
+				    	<a href="{{item.link}}" block="services-thumbs">
+				    		<span elem="image">
+								<picture>
+									 <!-- <source type="image/webp" srcset="img/image.webp"> -->
+									 <source type="image/jpeg" srcset="{{item.image}}">
+									 <img src="{{item.image}}" loading="lazy" width="388px" height="268px" alt="">
+								</picture>
+				    		</span>
+				    		<span elem="content">
+				    			<span elem="name">{{item.name}}</span>
+				    			{% if item.desc %}
+					    			<span elem="desc">{{item.desc}}</span>
+				    			{% endif %}
+				    			<span elem="text">{{item.text}}</span>
+				    		</span>
+				    	</a><!-- services-thumbs -->
+				    </div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div><!-- listes-block -->
+
+{% endif %}

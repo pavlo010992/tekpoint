@@ -1,0 +1,237 @@
+{% if tableType == '2' %}
+	<div block="table-block">
+		<div elem="bg-fon" class="wow fadeIn" data-wow-delay="100ms">
+			<picture>
+				 <!-- <source type="image/webp" srcset="img/values-bg.webp"> -->
+				 <source type="image/jpeg" srcset="img/image10.jpg">
+				 <img src="img/image10.jpg" loading="lazy" width="1920px" height="790px" alt="">
+			</picture>
+		</div>
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="200ms">
+				<h2 data-letter="M">Marketing <span></span></h2>
+			</div>
+			<div class="site-description wow fadeInUp" data-wow-delay="300ms">
+				Our marketing services at a glance
+				<span><span></span></span>
+			</div>
+			<div elem="table" class="wow fadeIn" data-wow-delay="400ms">
+				<div elem="table-head">
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Service
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon2.svg"  loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Target group
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Your challenge
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Solution
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Your benefits
+						</div>
+					</div>
+				</div>
+				<div elem="table-body">
+					{% for item in table2 %}
+						<div elem="table-row">
+							<div elem="table-row-name">
+								{{ item.name }}
+							</div>
+							<div elem="table-row-content">
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon2.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Target group
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value1}}</div>
+								</div>
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon3.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Your challenge
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value2}}</div>
+								</div>
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon4.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Solution
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value3}}</div>
+								</div>
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon5.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Your benefits
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value4}}</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div><!-- table-block -->
+{% else %}
+	<div block="table-block">
+		<div elem="bg-fon" class="wow fadeIn" data-wow-delay="100ms">
+			<picture>
+				 <!-- <source type="image/webp" srcset="img/values-bg.webp"> -->
+				 <source type="image/jpeg" srcset="img/image9.jpg">
+				 <img src="img/image9.jpg" loading="lazy" width="1920px" height="790px" alt="">
+			</picture>
+		</div>
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="200ms">
+				<h2 data-letter="L">Logistics <span></span></h2>
+			</div>
+			<div class="site-description wow fadeInUp" data-wow-delay="300ms">
+				Our logistics services at a glance
+				<span><span></span></span>
+			</div>
+			<div elem="table" class="wow fadeIn" data-wow-delay="400ms">
+				<div elem="table-head">
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Service
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon2.svg"  loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Target group
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Your challenge
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Solution
+						</div>
+					</div>
+					<div elem="table-params">
+						<div elem="table-params-icon">
+							<img src="img/table-icon1.svg" loading="lazy" alt="">
+						</div>
+						<div elem="table-params-name">
+							Your benefits
+						</div>
+					</div>
+				</div>
+				<div elem="table-body">
+					{% for item in table %}
+						<div elem="table-row">
+							<div elem="table-row-name">
+								{{ item.name }}
+							</div>
+							<div elem="table-row-content">
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon2.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Target group
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value1}}</div>
+								</div>
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon3.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Your challenge
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value2}}</div>
+								</div>
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon4.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Solution
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value3}}</div>
+								</div>
+								<div elem="table-row-value">
+									<div elem="table-params">
+										<div elem="table-params-icon">
+											<img src="img/table-icon5.svg"  loading="lazy" alt="">
+										</div>
+										<div elem="table-params-name">
+											Your benefits
+										</div>
+									</div>
+									<div elem="table-row-value-body">{{item.value4}}</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div><!-- table-block -->
+{% endif %}

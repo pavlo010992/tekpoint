@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ pageTitle }} - {{ app.package.name | capitalize }} v{{ app.package.version }} / {{ git.branch }}</title>
+        <title>{{ pageTitle }}</title>
 
-        <meta name="theme-color" content="{{ app.stylus.colors.theme }}">
+        <meta name="theme-color" content="#101010">
 
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
         <meta name="format-detection" content="telephone=no">
@@ -20,7 +20,13 @@
         <meta name="MobileOptimized" content="320">
         <meta name="HandheldFriendly" content="True">
 
-        <link rel="stylesheet" href="css/app.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/plugins.min.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <link rel="stylesheet" href="css/app.css?04-06">
 
         {% block inlineStyles %}{% endblock %}
     </head>
@@ -47,18 +53,13 @@
 
         </div><!-- app:wrapper -->
 
-        {% include 'page-scroller.html' %}
-
 		{{ inlineSvgSprite() }}
-
-		<script>
-			var site_defers = {
-				smoothscroll: 'js/vendors/smoothscroll.polyfill-0.4.4.js',
-			}
-		</script>
+		{% include 'mobile-menu.html' %}
+		{% include 'remodal.html' %}
 
         <script src="js/vendors/jquery-3.6.0.min.js"></script>
-        <script src="js/app.js"></script>
+        <script src="js/plugins.min.js"></script>
+        <script src="js/app.js?04-06"></script>
 
     </body><!-- app -->
 </html>

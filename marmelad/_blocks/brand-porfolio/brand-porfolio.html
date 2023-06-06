@@ -1,0 +1,107 @@
+{% if brandType == '2' %}
+	<div block="brand-porfolio">
+		<div elem="bg-fon" class="wow fadeIn" data-wow-delay="100ms">
+			<picture>
+				 <!-- <source type="image/webp" srcset="img/brand-bg.webp"> -->
+				 <source type="image/jpeg" srcset="img/brand-bg2.jpg">
+				 <img src="img/brand-bg2.jpg" loading="lazy" width="1920px" height="790px" alt="">
+			</picture>
+		</div>
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="200ms">
+				<h2 data-letter="O">Our Customers <span></span></h2>
+			</div>
+			<div elem="body" class="wow fadeInUp" data-wow-delay="300ms">
+				<div elem="top-slider" class="swiper">
+					<div elem="list" class="swiper-wrapper">
+						{% for item in brand2 %}
+						    <div elem="item" class="swiper-slide">
+						    	<div block="brand-thumbs">
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand-customers/grey/{{item.img}}.png">
+										 <img src="img/brand-customers/grey/{{item.img}}.png" loading="lazy" alt="">
+									</picture>
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand-customers/hover/{{item.img}}.png">
+										 <img src="img/brand-customers/hover/{{item.img}}.png" class="hover" loading="lazy" alt="">
+									</picture>
+						    	</div><!-- brand -->
+						    </div>
+						{% endfor %}
+					</div>
+				</div>
+				<div elem="bottom-slider" class="swiper">
+					<div elem="list" class="swiper-wrapper">
+						{% for item in brand2 %}
+						    <div elem="item" class="swiper-slide">
+						    	<div block="brand-thumbs">
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand-customers/grey/{{item.img}}.png">
+										 <img src="img/brand-customers/grey/{{item.img}}.png" loading="lazy" alt="">
+									</picture>
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand-customers/hover/{{item.img}}.png">
+										 <img src="img/brand-customers/hover/{{item.img}}.png" class="hover" loading="lazy" alt="">
+									</picture>
+						    	</div><!-- brand -->
+						    </div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- brand-porfolio -->
+{% else %}
+	<div block="brand-porfolio">
+		<div elem="bg-fon" class="wow fadeIn" data-wow-delay="100ms">
+			<picture>
+				 <source type="image/webp" srcset="img/brand-bg.webp">
+				 <source type="image/jpeg" srcset="img/brand-bg.jpg">
+				 <img src="img/brand-bg.jpg" loading="lazy" width="1920px" height="790px" alt="">
+			</picture>
+		</div>
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="200ms">
+				<h2 data-letter="B">Brand portfolio <span></span></h2>
+			</div>
+			<div elem="body" class="wow fadeInUp" data-wow-delay="300ms">
+				<div elem="top-slider" class="swiper">
+					<div elem="list" class="swiper-wrapper">
+						{% for item in brand %}
+						    <div elem="item" class="swiper-slide">
+						    	<div block="brand-thumbs">
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand/grey/{{item.img}}.png">
+										 <img src="img/brand/grey/{{item.img}}.png" loading="lazy" alt="">
+									</picture>
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand/hover/{{item.img}}.png">
+										 <img src="img/brand/hover/{{item.img}}.png" class="hover" loading="lazy" alt="">
+									</picture>
+						    	</div><!-- brand -->
+						    </div>
+						{% endfor %}
+					</div>
+				</div>
+				<div elem="bottom-slider" class="swiper">
+					<div elem="list" class="swiper-wrapper">
+						{% for item in brand %}
+						    <div elem="item" class="swiper-slide">
+						    	<div block="brand-thumbs">
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand/grey/{{item.img}}.png">
+										 <img src="img/brand/grey/{{item.img}}.png" loading="lazy" alt="">
+									</picture>
+									<picture>
+										 <source type="image/jpeg" srcset="img/brand/hover/{{item.img}}.png">
+										 <img src="img/brand/hover/{{item.img}}.png" class="hover" loading="lazy" alt="">
+									</picture>
+						    	</div><!-- brand -->
+						    </div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- brand-porfolio -->
+{% endif %}

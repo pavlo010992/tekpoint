@@ -1,0 +1,61 @@
+{% if brandMoreType == '2' %}
+	<div block="brand-more-list">
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="100ms" elem="title">
+				<h2 data-letter="O">Our Customers <span></span></h2>
+			</div>
+			<div class="site-description wow fadeInUp" data-wow-delay="200ms">
+				Through a commitment to excellence, we collaborate with industry-leading technology vendors, each offering unique solutions to meet the evolving needs of our customers.
+				<span>
+					<span></span>
+				</span>
+			</div>
+
+			<div elem="content" class="swiper wow fadeInUp" data-wow-delay="300ms">
+				<div elem="list" class="swiper-wrapper">
+					{% for item in brand3 %}
+					    {% if loop.index == 1 or loop.index%2 != 0 %}
+					        <div elem="item-group" class="swiper-slide">
+					    {% endif %}
+					        <div elem="item">
+					        	{% include "brand-more-thumbs.html" %}
+					        </div>
+					     {% if loop.index == brand3.length or loop.index%2 == 0 %}
+					     	</div>
+					     {% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div><!-- brand-more-list -->
+{% else %}
+	<div block="brand-more-list">
+		<div elem="inner" class="site-width">
+			<div class="site-title wow fadeInUp" data-wow-delay="100ms" elem="title">
+				<h2 data-letter="B">Brand portfolio <span></span></h2>
+			</div>
+			<div class="site-description wow fadeInUp" data-wow-delay="200ms">
+				Strong vendors, strong relationships
+				<span>
+					<span></span>
+				</span>
+			</div>
+
+			<div elem="content" class="swiper wow fadeInUp" data-wow-delay="300ms">
+				<div elem="list" class="swiper-wrapper">
+					{% for item in brand3 %}
+					    {% if loop.index == 1 or loop.index%2 != 0 %}
+					        <div elem="item-group" class="swiper-slide">
+					    {% endif %}
+					        <div elem="item">
+					        	{% include "brand-more-thumbs.html" %}
+					        </div>
+					     {% if loop.index == brand3.length or loop.index%2 == 0 %}
+					     	</div>
+					     {% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div><!-- brand-more-list -->
+{% endif %}

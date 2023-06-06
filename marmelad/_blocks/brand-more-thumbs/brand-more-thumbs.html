@@ -1,0 +1,30 @@
+<div block="brand-more-thumbs">
+	<a href="#" elem="top">
+		<div elem="fon">
+			<picture>
+				 <!-- <source type="image/webp" srcset="img/brand-bg.webp"> -->
+				 <source type="image/jpeg" srcset="{{item.fon}}">
+				 <img src="{{item.fon}}" loading="lazy" width="388px" height="248px" alt="">
+			</picture>
+		</div>
+		<span elem="logo">
+			{% if loop.index < 8 %}
+				<picture>
+					 <source type="image/jpeg" srcset="img/brand/grey/{{item.img}}.png">
+					 <img src="img/brand/grey/{{item.img}}.png" loading="lazy" alt="">
+				</picture>
+			{% else %}
+				<picture>
+					 <source type="image/jpeg" srcset="img/brand-customers/grey/{{item.img}}.png">
+					 <img src="img/brand-customers/grey/{{item.img}}.png" loading="lazy" alt="">
+				</picture>
+			{% endif %}
+		</span>
+	</a>
+	<div elem="bottom">
+		<div elem="text">{{item.text}}</div>
+		<div elem="more">
+			<a href="#" class="site-btn site-btn--1">learn more </a>
+		</div>
+	</div>
+</div><!-- brand-more-thumbs -->

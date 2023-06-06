@@ -1,0 +1,51 @@
+<div block="hero-banner" class="wow fadeIn" data-wow-delay="100ms">
+	<div elem="list">
+		{% for item in bannerList %}
+			{% if not iterration %}
+			    <div elem="item">
+				    <div block="banner-thumbs">
+				    	<div elem="image">
+							<picture>
+								 <!-- <source type="image/webp" srcset="img/image.webp"> -->
+								 <source type="image/jpeg" srcset="{{item.img}}">
+								 <img src="{{item.img}}" loading="lazy" width="1920px" height="860px" alt="">
+							</picture>
+				    	</div>
+				    	<div elem="content" class="site-width">
+					    	{% if loop.index == 1 %}
+					    	    <h1 elem="name">{{item.name}}</h1>
+					    	{% else %}
+					    		<div elem="name" class="h1">{{item.name}}</div>
+					    	{% endif %}
+					    	{% if item.button %}
+					    		<div elem="more">
+						    	    <a href="/about-company.html" class="site-btn site-btn--1">{{item.button}}</a>
+					    		</div>
+					    	{% endif %}
+				    	</div>
+				    </div><!-- banner-thumbs -->
+			    </div>
+			{% elseif loop.index == iterration %}
+			    <div elem="item">
+				    <div block="banner-thumbs">
+				    	<div elem="image">
+							<picture>
+								 <!-- <source type="image/webp" srcset="img/image.webp"> -->
+								 <source type="image/jpeg" srcset="{{item.img}}">
+								 <img src="{{item.img}}" loading="lazy" width="1920px" height="860px" alt="">
+							</picture>
+				    	</div>
+				    	<div elem="content" class="site-width">
+				    		<h1 elem="name" class="wow fadeInLeft" data-wow-delay="200ms">{{item.name}}</h1>
+					    	{% if item.button %}
+					    		<div elem="more">
+						    	    <a href="#" class="site-btn site-btn--1">{{item.button}}</a>
+					    		</div>
+					    	{% endif %}
+				    	</div>
+				    </div><!-- banner-thumbs -->
+			    </div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div><!-- hero-banner -->

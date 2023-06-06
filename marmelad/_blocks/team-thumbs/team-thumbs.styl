@@ -1,0 +1,123 @@
+.team-thumbs
+  position relative
+  height 100%
+  display flex
+  flex-direction column
+
+  &:hover
+    & ^[0]
+      &__information
+        opacity 1
+        visibility visible
+
+  &__top
+    flex 1 0 auto
+    margin-bottom 10px
+
+    &-content
+      position relative
+      margin-bottom 12px
+
+      &:before
+        content ""
+        display block
+        padding-top 150%
+
+  &__image
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    z-index 1
+    background #fff
+    border-radius: 6px;
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+      border-radius: 6px;
+
+  &__information
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    border-radius: 3px;
+    display flex
+    flex-direction column
+    align-items center
+    background: linear-gradient(0deg, rgba(16, 16, 16, 0.81), rgba(16, 16, 16, 0.81));
+    padding 15% 10px 10px
+    opacity 0
+    visibility hidden
+    transition opacity 0.3s ease-in-out
+    z-index 1
+    backdrop-filter: blur(37.5378px);
+    border-radius: 6px;
+    overflow hidden
+
+    &--view
+      opacity 1
+      visibility visible
+
+  &__qr
+    width 47%
+    text-align center
+    margin-bottom 20px
+
+  &__phone
+    padding-top 22px
+    text-align center
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    color: $orange;
+    margin-bottom 20px
+    background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.65301 12C3.88184 12 0 8.11816 0 3.34699C0.00180413 2.52859 0.300736 1.7387 0.841218 1.12416C1.3817 0.509628 2.12695 0.112269 2.93842 0.00596684C3.14528 -0.0169691 3.35406 0.0265832 3.5345 0.130308C3.71494 0.234032 3.85765 0.392537 3.94193 0.582834L5.14974 3.40107C5.21239 3.54736 5.23751 3.70697 5.22282 3.86543C5.20813 4.02389 5.15409 4.17616 5.06562 4.30844L4.06812 5.83473C4.5198 6.7514 5.26406 7.49143 6.1833 7.93789L7.69156 6.93438C7.8237 6.84531 7.97636 6.7914 8.13512 6.77773C8.29389 6.76406 8.45352 6.79109 8.59893 6.85627L11.4172 8.05807C11.6075 8.14235 11.766 8.28506 11.8697 8.4655C11.9734 8.64594 12.017 8.85472 11.994 9.06158C11.8877 9.87305 11.4904 10.6183 10.8758 11.1588C10.2613 11.6993 9.47141 11.9982 8.65301 12ZM3.0586 0.961403C2.4787 1.03595 1.94585 1.31931 1.55982 1.75843C1.17379 2.19755 0.961059 2.76232 0.961446 3.34699C0.963037 5.38643 1.77391 7.34189 3.21601 8.78399C4.65811 10.2261 6.61357 11.037 8.65301 11.0386C9.23768 11.0389 9.80245 10.8262 10.2416 10.4402C10.6807 10.0542 10.9641 9.5213 11.0386 8.9414L8.22036 7.73959L6.7181 8.7431C6.57987 8.83448 6.42038 8.88859 6.25508 8.90017C6.08978 8.91175 5.9243 8.88042 5.77468 8.8092C4.65516 8.26766 3.7496 7.36632 3.20282 6.24935C3.13072 6.10024 3.09837 5.93504 3.1089 5.76975C3.11943 5.60446 3.17248 5.44469 3.26291 5.30594L4.26641 3.77964L3.0586 0.961403Z' fill='%23F8F8F8'/%3E%3C/svg%3E%0A") 50% 0 no-repeat;
+
+    &--email
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1.25C12 0.5625 11.46 0 10.8 0H1.2C0.54 0 0 0.5625 0 1.25V8.75C0 9.4375 0.54 10 1.2 10H10.8C11.46 10 12 9.4375 12 8.75V1.25ZM10.8 1.25L6 4.36875L1.2 1.25H10.8ZM10.8 8.75H1.2V2.5L6 5.625L10.8 2.5V8.75Z' fill='%23F8F8F8'/%3E%3C/svg%3E%0A");
+
+    &:last-child
+      margin-bottom 0
+
+    a
+      color $orange
+      text-decoration none
+
+  &__name
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+  &__status
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #7C7C7C;
+
+  @media (min-width: $desc)
+    &__top
+
+      &-content
+        margin-bottom 30px
+
+    &__information
+      padding 25% 10px 10px
+
+    &__qr
+      margin-bottom 70px
+
+    &__phone
+      font-size: 16px;
+
+    &__name
+      font-size: 22px;
+
+    &__status
+      font-size: 16px;

@@ -1,0 +1,344 @@
+.text-information-block
+  padding-top 60px
+  padding-bottom 40px
+
+  &__body
+    margin-bottom 60px
+    padding-bottom 1px
+
+  &__content
+    margin-bottom 50px
+
+  &__images
+    margin-right 10px
+    position relative
+    margin-bottom 60px
+
+    &:before
+      content ""
+      position absolute
+      width 110px
+      right -10px
+      top -10px
+      bottom -10px
+      background $orange
+      border-radius 2px
+
+    &-list
+      &:not(.swiper-wrapper)
+        overflow hidden
+        display flex
+
+        & ^[0]
+          &__images-item
+            flex 0 0 100%
+
+  &__images-box
+    position relative
+
+    &:before
+      content ""
+      display block
+      padding-top 74%
+
+    img
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      top 0
+      width 100%
+      height 100%
+      object-fit cover
+      border-radius 2px
+
+  .swiper-scrollbar-wrap
+    position absolute
+    left 40px
+    right 40px
+    bottom -60px
+    overflow hidden
+    padding 10px 5px 5px
+    font-size 0
+    border-radius 2px
+
+  .swiper-scrollbar
+    position relative
+    background: rgba(217, 217, 217, 0.31);
+    height 4px
+    border-radius 2px
+    left auto
+    right auto
+    width auto
+
+  .swiper-scrollbar-drag
+    background none
+    position relative
+
+    &:before
+      content ""
+      position absolute
+      left -1000px
+      right 12px
+      top 0
+      bottom 0
+      background $orange
+
+    &:after
+      content ""
+      position absolute
+      right 0
+      top 50%
+      margin-top -6px
+      width 12px
+      height 12px
+      background url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.00093 7.07881e-08C4.81416 -0.000182186 3.65399 0.35158 2.66716 1.0108C1.68032 1.67002 0.911141 2.60708 0.456901 3.70347C0.00266078 4.79987 -0.116235 6.00634 0.115246 7.17031C0.346728 8.33429 0.918192 9.40347 1.75736 10.2426C2.59653 11.0818 3.66571 11.6533 4.82969 11.8848C5.99366 12.1162 7.20014 11.9973 8.29653 11.5431C9.39292 11.0889 10.33 10.3197 10.9892 9.33284C11.6484 8.34601 12.0002 7.18584 12 5.99908C11.9963 4.40914 11.3631 2.88538 10.2389 1.76112C9.11463 0.636867 7.59086 0.00365091 6.00093 7.07881e-08ZM6.00093 9.4603C5.31632 9.46048 4.64704 9.25764 4.07773 8.87742C3.50841 8.49721 3.06463 7.95671 2.80252 7.32427C2.5404 6.69183 2.47173 5.99586 2.60518 5.32439C2.73862 4.65292 3.0682 4.0361 3.55222 3.55195C4.03625 3.0678 4.65298 2.73806 5.32441 2.60443C5.99585 2.47081 6.69183 2.5393 7.32434 2.80124C7.95685 3.06318 8.49747 3.50682 8.87784 4.07603C9.2582 4.64525 9.46122 5.31447 9.46122 5.99908C9.50269 7.92505 7.93243 9.45661 6.00093 9.45661V9.4603Z' fill='%23EB690F'/%3E%3Cpath d='M6 8C7.10457 8 8 7.10457 8 6C8 4.89543 7.10457 4 6 4C4.89543 4 4 4.89543 4 6C4 7.10457 4.89543 8 6 8Z' fill='%23B2B4B4'/%3E%3C/svg%3E%0A") 0 0 no-repeat
+      background-size contain
+
+  &__benefits
+    display flex
+    flex-wrap wrap
+    overflow hidden
+    margin-right -20px
+    padding-right 20px
+    margin-left -20px
+    padding-left 20px
+
+    &-item
+      flex 0 0 50%
+      text-align center
+      position relative
+      padding 0 15px 20px
+      margin-bottom 60px
+
+      @media (max-width: $desc - 1)
+        &:nth-child(2n)
+          &:after
+            content ""
+            position absolute
+            left 0
+            top 36px
+            bottom 14px
+            width 1px
+            background rgba(192, 183, 232, 0.33)
+
+        &:nth-child(4n + 1)
+          &:before
+            content ""
+            position absolute
+            left 0
+            right -1000px
+            top 20px
+            bottom 0
+            background: linear-gradient(89.93deg, #545454 0.05%, #1D1D1D 99.94%);
+            box-shadow: 0px 2.27255px 2.27255px rgba(192, 183, 232, 0.01);
+            border-radius: 59px 0px 0px 59px;
+
+        &:nth-child(4n + 4)
+          &:before
+            content ""
+            position absolute
+            right 0
+            left -1000px
+            top 20px
+            bottom 0
+            background: linear-gradient(89.93deg, #545454 0.05%, #1D1D1D 99.94%);
+            box-shadow: 0px 2.27255px 2.27255px rgba(192, 183, 232, 0.01);
+            border-radius: 0px 59px 59px 0px;
+
+    &-icon
+      text-align center
+      margin-bottom 10px
+      height 38px
+      display flex
+      align-items center
+      justify-content center
+      position relative
+      z-index 1
+
+      img
+        max-width 66px
+        max-height 38px
+
+    &-text
+      position relative
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      z-index 1
+
+  &__numbers
+
+    &-item
+      color: #fff;
+      font-weight: 700;
+      font-size 12px
+      line-height: 1.2;
+      text-align center
+      padding-bottom 20px
+      margin-bottom 20px
+      position relative
+
+      &:before
+        content ""
+        position absolute
+        left 50%
+        top 100%
+        width 114px
+        margin-left -57px
+        border-bottom 1px solid rgba(124, 124, 124, 0.66)
+
+
+      &:last-child
+        margin-bottom 0
+        padding-bottom 0
+        &:before
+          display none
+
+      strong
+        display block
+        color $orange
+        font-size: 24px;
+
+  @media (min-width: $tablet)
+    &__benefits
+      margin-right -25px
+      padding-right 25px
+      margin-left -25px
+      padding-left 25px
+
+    &__numbers
+      margin-top 40px
+      display flex
+      justify-content center
+
+      &-item
+        padding-bottom 0
+        padding-right 20px
+        margin-right 20px
+        margin-bottom 0
+        border-right 1px solid #FFFFFF
+
+        &:before
+          display none
+
+        &:last-child
+          margin-right 0
+          padding-right 0
+          border none
+
+        strong
+          display inline-block
+          margin-right 2px
+
+  @media (min-width: $desc)
+    padding-top 80px
+    padding-bottom 130px
+
+    &__body
+      display flex
+      align-items flex-start
+      margin 0 0 100px
+
+    &__images
+      flex 0 0 590px
+      margin-right 0
+
+      &:before
+        content ""
+        position absolute
+        width 180px
+        right -20px
+        top -20px
+        bottom -20px
+        border-radius 4px
+
+    &__images-box
+
+      img
+        border-radius 4px
+
+    &__content
+      flex 1 1 0
+      margin 0 50px 0 0
+
+    .swiper-scrollbar-wrap
+      padding 12px 5px 5px
+      left 0
+      right 260px
+
+    .swiper-scrollbar-drag
+      cursor pointer
+
+      &:before
+        right 20px
+
+      &:after
+        margin-top -10px
+        width 20px
+        height 20px
+
+    &__benefits
+      padding 0
+      margin 0
+      position relative
+      &:before
+        content ""
+        position absolute
+        left 0
+        right 0
+        top 20px
+        bottom 0
+        background: linear-gradient(89.93deg, #545454 0.05%, #1D1D1D 99.94%);
+        box-shadow: 0px 3.17314px 3.17314px rgba(192, 183, 232, 0.01);
+        border-radius: 71px;
+
+      &-item
+        flex 0 0 25%
+        margin-bottom 0
+
+        &:nth-child(1n + 5)
+          margin-top 40px
+
+      &-item
+        padding 0 15px 30px
+
+        &:after
+          content ""
+          position absolute
+          right 0
+          top 40px
+          bottom 20px
+          width 1px
+          background rgba(192, 183, 232, 0.33)
+
+        &:nth-child(4n)
+          &:after
+            display none
+
+      &-icon
+        height 42px
+
+        img
+          max-width 76px
+          max-height 42px
+
+      &-text
+        font-size: 22px;
+
+
+    &__numbers
+      margin-top 60px
+
+      &-item
+        font-size 18px
+        padding-right 50px
+        margin-right 50px
+        font-weight 500
+
+        strong
+          font-size: 72px;
+          font-weight 500

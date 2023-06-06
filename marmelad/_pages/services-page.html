@@ -1,0 +1,24 @@
+= yaml =
+pageTitle: Services
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 4 %}
+	{% include 'hero-banner.html' %}
+	{% include 'text-and-image.html' %}
+	{% include 'block-with-list.html' %}
+	{% set blockWithListType = '2' %}
+	{% include 'block-with-list.html' %}
+	{% include 'listes-block.html' %}
+{% endblock %}

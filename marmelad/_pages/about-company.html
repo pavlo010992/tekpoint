@@ -1,0 +1,27 @@
+= yaml =
+pageTitle: About company
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 2 %}
+	{% include 'hero-banner.html' %}
+	{% include 'text-information-block.html' %}
+	{% include 'values-block.html' %}
+
+	{% set brandType = '2' %}
+	{% include 'brand-porfolio.html' %}
+	{% include 'text-block.html' %}
+	{% include 'team-mini-block.html' %}
+
+{% endblock %}

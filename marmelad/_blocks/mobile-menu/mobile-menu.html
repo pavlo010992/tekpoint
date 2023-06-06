@@ -1,0 +1,21 @@
+<div block="mobile-menu">
+	<div elem="inner">
+		<button elem="close"></button>
+		<ul elem="list">
+			{% for item in menu %}
+			    <li {% if item.level2 %}class="hasChild"{% endif %}>
+			    	<a href="{{item.link}}">{{item.name}}</a>
+			    	{% if item.level2 %}
+			    		<ul>
+			    			{% for i in item.level2 %}
+			    			    <li>
+			    			    	<a href="{{i.link}}">{{i.name}}</a>
+			    			    </li>
+			    			{% endfor %}
+			    		</ul>
+			    	{% endif %}
+			    </li>
+			{% endfor %}
+		</ul>
+	</div>
+</div><!-- mobile-menu -->

@@ -1,0 +1,25 @@
+= yaml =
+pageTitle: Marketing services
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 7 %}
+	{% include 'hero-banner.html' %}
+
+	{% set tableType = 2 %}
+	{% include 'table-block.html' %}
+
+	{% set loopIndexHide = 2 %}
+	{% include 'listes-block.html' %}
+{% endblock %}

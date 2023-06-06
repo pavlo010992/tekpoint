@@ -1,0 +1,24 @@
+= yaml =
+pageTitle: Logistic services
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 6 %}
+	{% include 'hero-banner.html' %}
+
+	{% include 'table-block.html' %}
+
+	{% set loopIndexHide = 1 %}
+	{% include 'listes-block.html' %}
+{% endblock %}

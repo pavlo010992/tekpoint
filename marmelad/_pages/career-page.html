@@ -1,0 +1,32 @@
+= yaml =
+pageTitle: Career
+bodyClasses: ''
+layout: !!map
+    header: true
+    footer: true
+    left: false
+    right: false
+= yaml =
+
+{% extends 'app.html' %}
+
+{% block inlineStyles %}
+{% endblock %}
+
+{% block main %}
+	{% set iterration = 8 %}
+	{% include 'hero-banner.html' %}
+	{% set textInfoType = '2' %}
+	{% include 'text-information-block.html' %}
+	{% set valuesBlockType = '2' %}
+	{% include 'values-block.html' %}
+	{% set citationBlockType = '2' %}
+	{% include 'text-block.html' %}
+	{% include 'counries-block.html' %}
+
+	{% set blockWithListType = '4' %}
+	{% include 'block-with-list.html' %}
+	{% include 'vacancies-list.html' %}
+	{% include 'reviews-block.html' %}
+	{% include 'information-text-block.html' %}
+{% endblock %}

@@ -1,0 +1,187 @@
+.reviews-block
+  position relative
+  padding-top 60px
+  padding-bottom 144px
+
+  &__bg-fon
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+
+    &:before
+      content ""
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      right 0
+      background linear-gradient(0deg, rgba(16, 16, 16, 0.77), rgba(16, 16, 16, 0.77))
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+
+  &__inner
+    position relative
+    z-index 1
+
+  .site-description
+    margin-bottom 60px
+
+  .swiper
+    &:not(.swiper-initialized)
+      .swiper-slide
+        max-width 312px
+
+  .swiper-scrollbar-wrap
+    overflow hidden
+    padding 10px 5px 5px
+    margin 40px 40px 0
+    line-height 1
+    font-size 0
+    border-radius 2px
+
+  .swiper-scrollbar
+    position relative
+    background: rgba(217, 217, 217, 0.31);
+    height 4px
+    border-radius 2px
+    left auto
+    right auto
+    width auto
+
+  .swiper-scrollbar-drag
+    background none
+    position relative
+
+    &:before
+      content ""
+      position absolute
+      left -1000px
+      right 12px
+      top 0
+      bottom 0
+      background $orange
+
+    &:after
+      content ""
+      position absolute
+      right 0
+      top 50%
+      margin-top -6px
+      width 12px
+      height 12px
+      background url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.00093 7.07881e-08C4.81416 -0.000182186 3.65399 0.35158 2.66716 1.0108C1.68032 1.67002 0.911141 2.60708 0.456901 3.70347C0.00266078 4.79987 -0.116235 6.00634 0.115246 7.17031C0.346728 8.33429 0.918192 9.40347 1.75736 10.2426C2.59653 11.0818 3.66571 11.6533 4.82969 11.8848C5.99366 12.1162 7.20014 11.9973 8.29653 11.5431C9.39292 11.0889 10.33 10.3197 10.9892 9.33284C11.6484 8.34601 12.0002 7.18584 12 5.99908C11.9963 4.40914 11.3631 2.88538 10.2389 1.76112C9.11463 0.636867 7.59086 0.00365091 6.00093 7.07881e-08ZM6.00093 9.4603C5.31632 9.46048 4.64704 9.25764 4.07773 8.87742C3.50841 8.49721 3.06463 7.95671 2.80252 7.32427C2.5404 6.69183 2.47173 5.99586 2.60518 5.32439C2.73862 4.65292 3.0682 4.0361 3.55222 3.55195C4.03625 3.0678 4.65298 2.73806 5.32441 2.60443C5.99585 2.47081 6.69183 2.5393 7.32434 2.80124C7.95685 3.06318 8.49747 3.50682 8.87784 4.07603C9.2582 4.64525 9.46122 5.31447 9.46122 5.99908C9.50269 7.92505 7.93243 9.45661 6.00093 9.45661V9.4603Z' fill='%23EB690F'/%3E%3Cpath d='M6 8C7.10457 8 8 7.10457 8 6C8 4.89543 7.10457 4 6 4C4.89543 4 4 4.89543 4 6C4 7.10457 4.89543 8 6 8Z' fill='%23B2B4B4'/%3E%3C/svg%3E%0A") 0 0 no-repeat
+      background-size contain
+
+  &__item
+    height: auto;
+
+    &-inner
+      height 100%
+      transition padding 0.4s ease-in
+
+  @media (min-width: $tablet)
+
+    .swiper
+      &:not(.swiper-initialized)
+        .swiper-slide
+          max-width 100%
+
+    &__inner
+      overflow hidden
+
+    &__slider
+      max-width 48%
+      margin 0 auto
+      overflow visible
+
+    .swiper-slide
+      &:not(.swiper-slide-active)
+        .reviews-block__item-inner
+          padding-top 50px
+          padding-bottom 50px
+
+    .swiper-initialized
+      .swiper-slide
+        &:not(.swiper-slide-active)
+          .reviews-thumbs
+            background-color #fff
+            color #C7C7C7
+            font-weight 300
+            font-size 14px
+            padding 20px 25px
+            &__inner
+              background-size 40px auto
+              padding-top 54px
+              background-image url("data:image/svg+xml,%3Csvg width='38' height='29' viewBox='0 0 38 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.37356 26.5001C1.17851 24.1804 0 21.5788 0 17.3614C0 10.3974 4.61089 4.11111 11.4711 0.645467C12.2565 0.248723 13.2017 0.539014 13.6819 1.2763C14.2588 2.16199 13.948 3.34626 13.0609 3.921C9.67757 6.11305 7.88876 8.57146 6.88934 10.806C6.18354 12.384 8.09244 14.0218 9.81381 14.1809C13.6583 14.535 16.6888 17.6752 16.6888 21.5788C16.6888 23.547 15.903 25.4346 14.5041 26.8264C13.1053 28.2181 11.2081 29 9.22988 29C8.13589 28.9905 7.05472 28.7646 6.04931 28.3354C5.04391 27.9062 4.13434 27.2823 3.37356 26.5001ZM24.6848 26.5001C22.4897 24.1804 21.3112 21.5788 21.3112 17.3614C21.3112 10.3974 25.9221 4.11111 32.7823 0.645468C33.5677 0.248724 34.5129 0.539014 34.9931 1.2763C35.57 2.16199 35.2592 3.34626 34.3721 3.921C30.9888 6.11305 29.2 8.57146 28.2005 10.806C27.4947 12.384 29.4036 14.0218 31.125 14.1809C34.9695 14.535 38 17.6752 38 21.5788C38 23.547 37.2142 25.4346 35.8153 26.8264C34.4165 28.2181 32.5193 29 30.5411 29C29.4471 28.9905 28.3659 28.7646 27.3605 28.3354C26.3551 27.9062 25.4455 27.2823 24.6848 26.5001Z' fill='%23EBEBEB'/%3E%3C/svg%3E%0A")
+
+
+  @media (min-width: $desc)
+    padding-top 100px
+    padding-bottom 130px
+
+    .swiper-scrollbar-wrap
+      padding 12px 5px 5px
+      margin 40px 130px 0
+
+    .swiper-scrollbar-drag
+      cursor pointer
+
+      &:before
+        right 20px
+
+      &:after
+        margin-top -10px
+        width 20px
+        height 20px
+
+    .swiper-initialized
+      .swiper-slide-active
+        & + .swiper-slide
+          .reviews-thumbs
+            margin-right auto
+            margin-left 0 !important
+
+      .swiper-slide
+        &:not(.swiper-slide-active)
+          .reviews-thumbs
+            width 47%
+            margin-left auto
+
+.reviews-thumbs
+  padding 40px 18px 40px
+  border-radius 4px
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  color: #C7C7C7
+  background: #FFFFFF
+  height 100%
+  display flex
+  align-items center
+  background-color $orange
+  color #fff
+  transition color 0.4s ease-in, background 0.4s ease-in, font-size 0.4s ease-in
+
+  &__inner
+    width 100%
+    padding-top 80px
+    background url("data:image/svg+xml,%3Csvg width='59' height='46' viewBox='0 0 59 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.2379 42.0347C1.82979 38.3552 0 34.2284 0 27.5388C0 15.7672 8.12983 5.21649 19.9523 0L22.9071 4.63464C11.8721 10.7021 9.71477 18.5756 8.85447 23.5398C10.6313 22.6048 12.9574 22.2786 15.2372 22.4938C21.2064 23.0555 25.9116 28.0366 25.9116 34.2284C25.9116 37.3504 24.6914 40.3446 22.5196 42.5522C20.3477 44.7598 17.4021 46 14.3306 46C12.632 45.9849 10.9534 45.6266 9.39236 44.9458C7.83133 44.265 6.41911 43.2754 5.2379 42.0347ZM38.3263 42.0347C34.9182 38.3552 33.0884 34.2284 33.0884 27.5388C33.0884 15.7672 41.2183 5.21649 53.0408 0L55.9956 4.63464C44.9606 10.7021 42.8032 18.5756 41.9429 23.5398C43.7198 22.6048 46.0459 22.2786 48.3257 22.4938C54.2948 23.0555 59 28.0366 59 34.2284C59 37.3504 57.7799 40.3446 55.608 42.5522C53.4362 44.7598 50.4905 46 47.419 46C45.7205 45.9849 44.0418 45.6266 42.4808 44.9458C40.9198 44.265 39.5076 43.2754 38.3263 42.0347Z' fill='white' fill-opacity='0.47'/%3E%3C/svg%3E%0A") 50% 0 no-repeat
+    background-size 60px auto
+
+  @media (min-width: $tablet)
+    font-size 16px
+    font-weight 500
+  @media (min-width: $desc)
+    font-size 16px
+    font-weight 500
+    padding 30px 100px
+
+    &__inner
+      padding-top 80px
+      background-size 80px auto

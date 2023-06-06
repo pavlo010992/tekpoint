@@ -1,0 +1,145 @@
+.hero-banner
+  margin-top -172px
+  &__item
+    height 100%
+
+  &__list
+    &:not(.swiper-initialized)
+      overflow hidden
+      display flex
+
+      & ^[0]
+        &__item
+          flex 0 0 100%
+
+  .swiper-pagination
+    font-size 0
+    bottom 30px
+
+    > span
+      display inline-block
+      border 1px solid #fff
+      width 8px
+      height 8px
+      border-radius 100%
+      margin 0 3px
+      background none
+      opacity 1
+      &.swiper-pagination-bullet-active
+        border-color $orange
+        background $orange
+
+  @media (min-width: $desc)
+    margin-top -178px
+
+    .swiper
+      .banner-thumbs__content
+        transform: translateX(-8.333333%);
+        transition: transform .6s ease-in-out;
+
+      .swiper-slide-active .banner-thumbs__content
+        transform: translateX(0);
+
+    .swiper-pagination
+      bottom 0
+      top 0
+      right 0
+      left auto
+      width auto
+      padding-right 38px
+      display flex
+      flex-direction column
+      justify-content center
+
+      > span
+        display block
+        border none
+        width 48px
+        height 48px
+        text-align center
+        border-radius 0
+        margin 0
+        background none
+        opacity 1
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 48px;
+        text-transform: uppercase;
+        color: #FFFFFF
+        transition all 0.3s ease
+        position relative
+
+        &:after
+          content: "";
+          border: 2px solid transparent;
+          pointer-events: none;
+          position: absolute;
+          right: -10000px;
+          top: 50%;
+          transform: translate(100%,-50%);
+          transition: transform .6s ease;
+          width: 10000px;
+
+        &.swiper-pagination-bullet-active
+          background none
+          font-size 40px
+
+          &:after
+            border-color: #fff;
+            transform: translate(0.25rem,-50%);
+
+  @media (min-width: 1440px)
+    .swiper-pagination
+      padding-right 198px
+
+
+.banner-thumbs
+  display flex
+  align-items center
+  position relative
+  height 100%
+  min-height 660px
+  padding-top 100px
+
+  &__image
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+
+    &:after
+      content ""
+      position absolute
+      left 0
+      right 0
+      top 0
+      bottom 0
+      background: linear-gradient(0deg, rgba(48, 48, 48, 0.51), rgba(48, 48, 48, 0.51));
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+
+  &__content
+    padding-top 20px
+    padding-bottom 20px
+    position relative
+    z-index 1
+
+  &__name
+    margin-bottom 48px
+    text-align center
+
+  &__more
+    text-align center
+
+  @media (min-width: $desc)
+    min-height 860px
+    &__name
+      text-align left
+      max-width 960px
+
+    &__more
+      text-align left

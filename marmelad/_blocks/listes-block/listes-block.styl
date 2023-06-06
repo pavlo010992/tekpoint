@@ -1,0 +1,140 @@
+.listes-block
+  padding-top 60px
+  padding-bottom 50px
+
+  &__title
+    margin-bottom 30px
+
+  &__item
+    margin-bottom 60px
+
+  @media (min-width: $tablet)
+    &__list
+      display flex
+      flex-wrap wrap
+      margin-right -18px
+
+    &__item
+      flex 0 0 50%
+      flex-basis calc(50% - 18px)
+      margin-bottom 25px
+      margin-right 18px
+
+    &__row
+      display flex
+
+    &__column
+      &-left
+        margin-bottom 0
+        margin-right 60px
+        flex 1 1 0
+
+      &-right
+        text-align left
+        flex 0 0 auto
+
+  @media (min-width: $desc)
+    padding-top 100px
+    padding-bottom 60px
+
+    &__title
+      margin-bottom 35px
+
+    &__item
+      flex-basis calc(33.333% - 18px)
+
+.services-thumbs
+  height 100%
+  display block
+  text-decoration none
+  color #fff
+
+
+  &__image
+    position relative
+    margin-bottom 25px
+    display block
+
+    &:after
+      content ""
+      position absolute
+      bottom -20px
+      right 20px
+      width 40px
+      height 40px
+      background #fff url("data:image/svg+xml,%3Csvg width='8' height='17' viewBox='0 0 8 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.9973 8.51333C7.99782 8.79656 7.90487 9.07104 7.73458 9.28912L2.02324 16.5621C1.82936 16.8096 1.55074 16.9653 1.2487 16.9949C0.946653 17.0244 0.645916 16.9254 0.412646 16.7197C0.179376 16.5139 0.0326817 16.2183 0.00483352 15.8977C-0.0230146 15.5772 0.0702645 15.2581 0.264151 15.0105L5.38151 8.51333L0.446915 2.01613C0.352031 1.89214 0.281175 1.74948 0.238417 1.59633C0.19566 1.44319 0.181846 1.28259 0.197768 1.12376C0.213691 0.964931 0.259035 0.811008 0.331196 0.670837C0.403358 0.530666 0.500913 0.407013 0.618254 0.30698C0.735704 0.195971 0.873491 0.111897 1.02298 0.0600243C1.17248 0.00815392 1.33045 -0.010397 1.48702 0.00553513C1.64358 0.0214672 1.79535 0.071537 1.93283 0.152611C2.07031 0.233683 2.19053 0.344013 2.28596 0.476686L7.80311 7.74967C7.94649 7.97402 8.01486 8.2429 7.9973 8.51333Z' fill='%23EB680D'/%3E%3C/svg%3E%0A") 50% 50% no-repeat
+      border-radius 100%
+
+    &:before
+      content ""
+      display block
+      padding-top 72%
+
+    img
+      position absolute
+      right 0
+      top 0
+      bottom 0
+      left 0
+      width 100%
+      height 100%
+      object-fit cover
+      border-radius 4px
+
+  &__name
+    font-size 18px
+    text-transform uppercase
+    font-weight 400
+    line-height 1.1
+    display block
+
+  &__text
+    font-size 16px
+    font-weight 300
+    line-height 1.1
+    margin-top 10px
+    display block
+
+  &__desc
+    font-size 14px
+    color #7C7C7C
+    font-weight 500
+    margin-bottom 20px
+
+  &__content
+    display block
+
+  @media (min-width: $desc)
+    transition all .3s ease
+    border-radius: 4px;
+    padding 18px 0 35px
+
+    &:hover
+      background #ffffff
+      color #101010
+      padding-left 18px
+      padding-right 18px
+
+      & ^[0]
+        &__desc
+          color #7C7C7C
+
+        &__image
+          &:after
+            background $orange url("data:image/svg+xml,%3Csvg width='8' height='17' viewBox='0 0 8 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.9973 8.51333C7.99782 8.79656 7.90487 9.07104 7.73458 9.28912L2.02324 16.5621C1.82936 16.8096 1.55074 16.9653 1.2487 16.9949C0.946653 17.0244 0.645916 16.9254 0.412646 16.7197C0.179376 16.5139 0.0326817 16.2183 0.00483352 15.8977C-0.0230146 15.5772 0.0702645 15.2581 0.264151 15.0105L5.38151 8.51333L0.446915 2.01613C0.352031 1.89214 0.281175 1.74948 0.238417 1.59633C0.19566 1.44319 0.181846 1.28259 0.197768 1.12376C0.213691 0.964931 0.259035 0.811008 0.331196 0.670837C0.403358 0.530666 0.500913 0.407013 0.618254 0.30698C0.735704 0.195971 0.873491 0.111897 1.02298 0.0600243C1.17248 0.00815392 1.33045 -0.010397 1.48702 0.00553513C1.64358 0.0214672 1.79535 0.071537 1.93283 0.152611C2.07031 0.233683 2.19053 0.344013 2.28596 0.476686L7.80311 7.74967C7.94649 7.97402 8.01486 8.2429 7.9973 8.51333Z' fill='%23fff'/%3E%3C/svg%3E%0A") 50% 50% no-repeat
+
+    &__image
+      margin-bottom 30px
+
+      &:before
+        padding-top 268px
+    &__name
+      font-size 22px
+
+    &__text
+      font-size 18px
+      margin-top 15px
+
+    &__desc
+      font-size 16px
+      margin-bottom 25px

@@ -1,0 +1,36 @@
+.site-form
+
+  &__desc
+    margin-bottom 20px
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom 20px
+
+  &__item
+    margin-bottom 10px
+
+  &__button
+    .site-btn
+      width 100%
+      position relative
+      z-index 1
+
+  &__form + .site-form__send-true
+    display none
+
+  &__send-true
+    &-left
+      display none
+
+    .site-form__desc
+      margin 0
+
+
+  @media (min-width: $desc)
+
+    &__button
+      margin-top 30px
+      .site-btn
+        width auto
+        min-width 270px

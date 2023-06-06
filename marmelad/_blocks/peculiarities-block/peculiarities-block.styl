@@ -1,0 +1,157 @@
+.peculiarities-block
+  position relative
+  padding-top 80px
+  padding-bottom 80px
+
+  &__bg-fon
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+
+    &:before
+      content ""
+      position absolute
+      left 0
+      top 0
+      bottom 0
+      right 0
+      background linear-gradient(0deg, rgba(16, 16, 16, 0.74), rgba(16, 16, 16, 0.74))
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+
+  &__inner
+    position relative
+    z-index 1
+
+  &__title
+    margin-bottom 25px
+
+  &__content
+    & ^[0]
+      &__title
+        display none
+
+  &__item
+    display flex
+    margin-bottom 35px
+
+    &:last-child
+      margin-bottom 0
+
+    &-icon
+      flex 0 0 46px
+      margin-right 10px
+      height 46px
+      border-radius 100%
+      background $orange
+      display flex
+      align-items center
+      justify-content center
+
+    &-text
+      flex 1 1 0
+      display flex
+      align-items center
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.15;
+      text-transform: uppercase;
+      color: #FFFFFF
+
+  &__image
+    display none
+
+  @media (min-width: $mobile)
+    &__body
+      display flex
+      align-items center
+
+    &__content
+      flex 1 1 0
+
+    &__image
+      display block
+      flex 0 0 146px
+      margin-right -20px
+      position relative
+
+      &:before
+        content ""
+        position absolute
+        left 10px
+        top -8px
+        bottom -8px
+        right 0
+        border-radius 2px
+        background $orange
+
+      img
+        border-radius 2px 0 0 2px
+        position relative
+
+  @media (min-width: $tablet)
+
+    &__list
+      display flex
+      flex-wrap wrap
+
+    &__item
+      flex 0 0 50%
+      padding-right 20px
+
+    &__image
+      flex 0 0 300px
+      margin-right -25px
+
+  @media (min-width: $desc)
+    padding-top 0
+    padding-bottom 0
+    &__title
+      &--mobile
+        display none
+
+    &__item
+      margin-bottom 45px
+
+      &-icon
+        flex 0 0 64px
+        margin-right 15px
+        height 64px
+
+      &-text
+        font-weight: 500;
+        font-size: 22px;
+
+
+    &__content
+      padding-top 20px
+      padding-bottom 40px
+      margin-right 50px
+
+      & ^[0]
+        &__title
+          display flex
+          margin-bottom 20px
+
+    &__image
+      flex 0 0 408px
+      margin-top -10px
+      margin-bottom -10px
+
+      &:before
+        content ""
+        position absolute
+        left 300px
+        top -20px
+        bottom -20px
+        right -20px
+        border-radius 4px
+        background $orange
+
+      img
+        border-radius 4px

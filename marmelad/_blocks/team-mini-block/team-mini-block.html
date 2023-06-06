@@ -1,0 +1,26 @@
+<div block="team-mini-block" class="wow fadeInUp" data-wow-delay="100ms">
+	<div elem="inner" class="site-width">
+		<div block="site-row">
+			<div elem="column-left">
+				<div class="site-description">
+					Many years of experience paired with excellent expertise and a hands-on mentality characterize the Tekpoint management board
+					<span>
+						<span></span>
+					</span>
+				</div>
+			</div>
+			<div elem="column-right">
+				<a href="/management-board.html" class="site-btn site-btn--1">view more jobs</a>
+			</div>
+		</div>
+		<div elem="list">
+			{% for item in team %}
+				{% if loop.index < 4 %}
+				    <div elem="item">
+				    	{% include 'team-thumbs.html' %}
+				    </div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div><!-- team-mini-block -->

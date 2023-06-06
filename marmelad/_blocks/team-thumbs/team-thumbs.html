@@ -1,0 +1,28 @@
+<div block="team-thumbs">
+	<div elem="top">
+		<div elem="top-content">
+			<div elem="image">
+				{% if item.image %}
+					<picture>
+						 <!-- <source type="image/webp" srcset="img/image.webp"> -->
+						 <source type="image/jpeg" srcset="{{item.image}}">
+						 <img src="{{item.image}}" loading="lazy" width="388px" height="766px" alt="">
+					</picture>
+				{% endif %}
+			</div>
+			<div elem="information" {% if not item.image %}mods="view"{% endif %}>
+				<div elem="qr">
+					<img src="img/qr-code1.svg" loading="lazy" alt="">
+				</div>
+				<div elem="phone">
+					<a href="tel:+4313616670">+ 43.1.3616670</a>
+				</div>
+				<div elem="phone" mods="email">
+					<a href="mailto:info@tekpoint.com">info@tekpoint.com</a>
+				</div>
+			</div>
+		</div>
+		<div elem="name">{{item.name}}</div>
+	</div>
+	<div elem="status">{{item.status}}</div>
+</div><!-- team-thumbs -->
