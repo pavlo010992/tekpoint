@@ -46,6 +46,7 @@
       text-align center
 
     &-item
+      position relative
       display inline-block
       vertical-align middle
       text-decoration none
@@ -54,12 +55,24 @@
       margin 0 15px
       color #ffffff
 
-      &:hover
-        color $orange
+      img
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        max-width 28px
+        max-height 28px
+        transition opacity 0.3s ease
 
-      .svg-icon
-        width 28px
-        height 28px
+      img.hover
+        opacity 0
+
+      &:hover
+        img:not(.hover)
+          opacity 0
+
+        img.hover
+          opacity 1
 
   &__offices
     border-bottom 1px solid #7C7C7C
