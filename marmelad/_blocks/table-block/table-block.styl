@@ -120,6 +120,20 @@
 
       .table-block__table-params
         position relative
+
+        > *
+          position relative
+          z-index 1
+
+        &:after
+          content ""
+          position absolute
+          left 0
+          right 0
+          top 0
+          bottom 0
+          border-radius 4px
+          background $orange
         &:nth-child(2n)
           &:before
             background #fff
@@ -132,7 +146,7 @@
           width 1px
           background $orange
           opacity 0.4
-          margin-top -4px
+          margin-top -5px
 
     &__table-params
       flex 0 0 20%
