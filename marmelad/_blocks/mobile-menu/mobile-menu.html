@@ -3,7 +3,7 @@
 		<button elem="close"></button>
 		<ul elem="list">
 			{% for item in menu %}
-			    <li {% if item.level2 %}class="hasChild"{% endif %}>
+			    <li {% if item.level2 %}class="menu-item-has-children"{% endif %}>
 			    	<a href="{{item.link}}">{{item.name}}</a>
 			    	{% if item.level2 %}
 			    		<ul>

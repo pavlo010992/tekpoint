@@ -2013,7 +2013,7 @@ html {
 .mobile-menu__list > li:last-child {
   border: none;
 }
-.mobile-menu__list > li.hasChild > a:before {
+.mobile-menu__list > li.menu-item-has-children > a:before {
   content: "";
   position: absolute;
   right: 20px;

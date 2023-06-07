@@ -277,7 +277,7 @@ $(function () {
     });
   }
 
-  $('.mobile-menu__list > li.hasChild > a').on('click', function (e) {
+  $('.mobile-menu__list > li.menu-item-has-children > a').on('click', function (e) {
     if (!$(this).closest('li').hasClass('opened')) {
       e.preventDefault();
       $(this).closest('li').addClass('opened');
