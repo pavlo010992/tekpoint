@@ -4111,6 +4111,7 @@ html.remodal-is-locked {
     font-size: 18px;
     color: #b9b9b9;
     margin-bottom: 20px;
+    cursor: default;
   }
   .footer__offices-item-body {
     display: block !important;
